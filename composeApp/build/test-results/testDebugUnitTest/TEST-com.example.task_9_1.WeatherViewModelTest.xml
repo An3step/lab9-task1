@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.task_9_1.WeatherViewModelTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-20T07:03:55.702Z" hostname="DESKTOP-2U2NU26" time="0.041">
+  <properties/>
+  <testcase name="test error state when api fails" classname="com.example.task_9_1.WeatherViewModelTest" time="0.025"/>
+  <testcase name="test loading state when fetching weather" classname="com.example.task_9_1.WeatherViewModelTest" time="0.007"/>
+  <testcase name="test initial state is Idle" classname="com.example.task_9_1.WeatherViewModelTest" time="0.004"/>
+  <testcase name="test city names initial values" classname="com.example.task_9_1.WeatherViewModelTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

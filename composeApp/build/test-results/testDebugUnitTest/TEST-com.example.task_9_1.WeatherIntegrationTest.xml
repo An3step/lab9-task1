@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.task_9_1.WeatherIntegrationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-05-20T07:03:55.135Z" hostname="DESKTOP-2U2NU26" time="0.556">
+  <properties/>
+  <testcase name="test repository throws exception for blank city name" classname="com.example.task_9_1.WeatherIntegrationTest" time="0.52"/>
+  <testcase name="test repository returns cached data when api fails" classname="com.example.task_9_1.WeatherIntegrationTest" time="0.017"/>
+  <testcase name="test repository throws exception when no cache and api fails" classname="com.example.task_9_1.WeatherIntegrationTest" time="0.004"/>
+  <testcase name="test repository returns data from api and caches it" classname="com.example.task_9_1.WeatherIntegrationTest" time="0.007"/>
+  <testcase name="test repository stores multiple cities in cache" classname="com.example.task_9_1.WeatherIntegrationTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

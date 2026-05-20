@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.task_9_1.composeApp-mergeDebugResources-49:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Apps\\AndroidProjects\\.gradle\\caches\\9.2.1\\transforms\\c01909c64672e8096603c0ee91d5c5b8\\workspace\\transformed\\appcompat-1.7.1\\res\\values-v25\\values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        }
+    ]
+}

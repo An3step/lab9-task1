@@ -1,0 +1,12 @@
+abi_version=2.2.0
+builtins_platform=WASM
+compiler_version=2.2.10
+depends=components.resources\:library components.ui-tooling-preview\:library org.jetbrains.androidx.lifecycle\:lifecycle-viewmodel io.ktor\:ktor-client-content-negotiation io.ktor\:ktor-client-logging io.ktor\:ktor-client-core io.ktor\:ktor-serialization-kotlinx-json io.ktor\:ktor-events io.ktor\:ktor-websocket-serialization io.ktor\:ktor-sse io.ktor\:ktor-serialization-kotlinx io.ktor\:ktor-serialization io.ktor\:ktor-websockets io.ktor\:ktor-http org.jetbrains.compose.material3\:material3 org.jetbrains.compose.material\:material-ripple org.jetbrains.compose.foundation\:foundation org.jetbrains.compose.animation\:animation org.jetbrains.compose.animation\:animation-core org.jetbrains.androidx.lifecycle\:lifecycle-runtime-compose org.jetbrains.androidx.lifecycle\:lifecycle-runtime org.jetbrains.androidx.lifecycle\:lifecycle-common io.ktor\:ktor-utils io.ktor\:ktor-io org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:kotlinx-serialization-json-io org.jetbrains.kotlinx\:kotlinx-serialization-json org.jetbrains.kotlinx\:kotlinx-datetime org.jetbrains.compose.material\:material-icons-core org.jetbrains.compose.foundation\:foundation-layout org.jetbrains.compose.ui\:ui org.jetbrains.kotlinx\:kotlinx-browser org.jetbrains.compose.annotation-internal\:annotation org.jetbrains.kotlinx\:kotlinx-serialization-core org.jetbrains.kotlinx\:kotlinx-io-core org.jetbrains.kotlinx\:kotlinx-io-bytestring org.jetbrains.compose.runtime\:runtime-saveable kotlin org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.ui\:ui-text org.jetbrains.compose.ui\:ui-graphics org.jetbrains.compose.ui\:ui-unit org.jetbrains.kotlinx\:atomicfu org.jetbrains.skiko\:skiko org.jetbrains.compose.ui\:ui-geometry org.jetbrains.compose.ui\:ui-util
+ir_signature_versions=1,2
+jsOutputName=composeApp
+language_features=+JsAllowImplementingFunctionInterface +JsAllowValueClassesInExternals +MultiPlatformProjects
+metadata_version=1.4.1
+serializedIrFileFingerprints=cmldadldbvdw.1wxbamsvfmr6y 3874vj6202ab5.1nuq8f5qqn5ae 3uphgylc9qbn4.s5s01k6kfj3u 8l07d730evdp.171dnsfszp9d6 3jcxsjfmhn6qf.yxfbch5hitdj 32oq84in6harj.gxqhitgbmcil 1pnru2igetjft.ooe8r1toc9ca 37z5wbtk7wvi3.tmwatkyjkwua 2mbfsvoq4qa9c.ylesp08vzj0s i86etxexsnma.17n0trszajtga
+serializedKlibFingerprint=udxvp44vjv3u.1qs8nj95xd9ld
+unique_name=Task_9_1\:composeApp
+wasm_targets=wasm-js
