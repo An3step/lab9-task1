@@ -7,10 +7,9 @@ on:
     branches: [ main ]
 
 jobs:
-  # Сборка на Linux (Android, Web, Linux)
+  # Build Android and Wasm targets on Linux
   build-linux:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v4
     
@@ -23,21 +22,15 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
     
-    - name: Make gradlew executable
-      run: chmod +x gradlew
+    - name: Build Android and Wasm
+      run: ./gradlew :composeApp:assembleDebug :composeApp:wasmJsBrowserProductionWebpack
     
-    - name: Build Android, Web and Linux targets
-      run: ./gradlew build
-      # Конкретные таргеты для Android и Web
-      # run: ./gradlew assembleAndroidDebug assembleWeb jsBrowserProductionWebpack
-    
-    - name: Run common tests
-      run: ./gradlew allTests
+    - name: Run Common and Android tests
+      run: ./gradlew :composeApp:testDebugUnitTest :composeApp:wasmJsBrowserTest
 
-  # Сборка на macOS (iOS, macOS)
+  # Build iOS targets on macOS
   build-macos:
     runs-on: macos-latest
-    
     steps:
     - uses: actions/checkout@v4
     
@@ -50,18 +43,12 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
     
-    - name: Make gradlew executable
-      run: chmod +x gradlew
-    
-    - name: Build iOS and macOS targets
-      run: ./gradlew build
-      # Конкретные таргеты для iOS
-      # run: ./gradlew iosX64Test iosSimulatorArm64Test iosArm64 buildMacosX64
+    - name: Build iOS targets
+      run: ./gradlew :composeApp:iosX64MainBinaries :composeApp:iosSimulatorArm64MainBinaries
 
-  # Сборка на Windows
+  # Build Desktop target on Windows
   build-windows:
     runs-on: windows-latest
-    
     steps:
     - uses: actions/checkout@v4
     
@@ -74,28 +61,5 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
     
-    - name: Build Windows target
-      run: gradlew.bat build
-      # Для Windows desktop приложений
-      # run: gradlew.bat buildMingwX64
-
-  # Полная проверка (запускается после всех сборок)
-  check-all:
-    runs-on: ubuntu-latest
-    needs: [build-linux, build-macos, build-windows]
-    if: always()
-    
-    steps:
-    - name: Check build status
-      run: |
-        echo "Build Status:"
-        echo "Linux/Android/Web: ${{ needs.build-linux.result }}"
-        echo "macOS/iOS: ${{ needs.build-macos.result }}"
-        echo "Windows: ${{ needs.build-windows.result }}"
-        
-        if [ "${{ needs.build-linux.result }}" != "success" ] || \
-           [ "${{ needs.build-macos.result }}" != "success" ] || \
-           [ "${{ needs.build-windows.result }}" != "success" ]; then
-          echo "Some builds failed!"
-          exit 1
-        fi
+    - name: Build and Test Desktop
+      run: ./gradlew :composeApp:desktopJar :composeApp:desktopTest
